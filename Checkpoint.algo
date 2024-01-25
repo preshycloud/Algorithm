@@ -1,0 +1,26 @@
+# Input sentence
+sentence = "This is a sample sentence."
+
+# Initialize counters
+char_count = 0
+word_count = 0
+vowel_count = 0
+
+# Iterate through each character in the sentence
+for char in sentence:
+    # Increment character count
+    char_count += 1
+    
+    # Check if the character is a letter (considering both upper and lower case)
+    if char.isalpha():
+        # Increment vowel count if the character is a vowel
+        if char.lower() in "aeiou":
+            vowel_count += 1
+
+# Split the sentence into words and count the number of words
+word_count = len(sentence.split())
+
+# Output the results
+print("Length of the sentence:", char_count)
+print("Number of words in the sentence:", word_count)
+print("Number of vowels in the sentence:", vowel_count)
